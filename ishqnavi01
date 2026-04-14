@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;family=Work+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#fff4f6",
+                    "primary-container": "#ff7294",
+                    "secondary-container": "#dde4e6",
+                    "primary-fixed": "#ff7294",
+                    "primary": "#b7004d",
+                    "tertiary-container": "#ff972d",
+                    "on-primary-fixed": "#000000",
+                    "surface-dim": "#ffc4da",
+                    "surface-container-low": "#ffecf1",
+                    "on-error-container": "#570008",
+                    "on-tertiary-container": "#4d2700",
+                    "on-secondary-container": "#4c5355",
+                    "tertiary-dim": "#7a4100",
+                    "error": "#b31b25",
+                    "surface-bright": "#fff4f6",
+                    "surface-container-high": "#ffd8e5",
+                    "on-surface": "#4a2134",
+                    "inverse-primary": "#ff4d81",
+                    "secondary-fixed-dim": "#cfd6d8",
+                    "secondary-dim": "#4a5153",
+                    "tertiary": "#8b4b00",
+                    "error-dim": "#9f0519",
+                    "on-secondary": "#edf4f6",
+                    "outline": "#9c677d",
+                    "primary-fixed-dim": "#ff5484",
+                    "tertiary-fixed": "#ff972d",
+                    "surface-container-highest": "#ffd1e1",
+                    "secondary": "#565d5f",
+                    "on-secondary-fixed-variant": "#565d5f",
+                    "error-container": "#fb5151",
+                    "on-tertiary-fixed": "#291200",
+                    "on-secondary-fixed": "#394043",
+                    "inverse-on-surface": "#c68da3",
+                    "outline-variant": "#d89cb4",
+                    "background": "#fff4f6",
+                    "on-primary-container": "#4d001c",
+                    "surface-tint": "#b7004d",
+                    "on-error": "#ffefee",
+                    "on-surface-variant": "#7e4d61",
+                    "on-background": "#4a2134",
+                    "surface-variant": "#ffd1e1",
+                    "surface-container": "#ffe0ea",
+                    "on-tertiary-fixed-variant": "#592e00",
+                    "inverse-surface": "#220213",
+                    "primary-dim": "#a00043",
+                    "secondary-fixed": "#dde4e6",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed-variant": "#5e0024",
+                    "on-tertiary": "#fff0e6",
+                    "tertiary-fixed-dim": "#f38800",
+                    "on-primary": "#ffeff0"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Work Sans"],
+                    "label": ["Work Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background-color: #fff4f6;
+            color: #4a2134;
+        }
+        h1, h2, h3, .headline {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<nav class="bg-[#fff4f6]/70 backdrop-blur-xl sticky top-0 z-50 w-full">
+<div class="flex justify-between items-center px-8 py-4 w-full max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-12">
+<span class="text-2xl font-black italic tracking-tighter text-[#b7004d]">Ishqnavi</span>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-sm font-medium text-[#4a2134] pb-1 hover:text-[#b7004d] transition-colors duration-300" href="#">New Arrivals</a>
+<a class="text-sm font-medium text-[#b7004d] border-b-2 border-[#b7004d] pb-1" href="#">Collections</a>
+<a class="text-sm font-medium text-[#4a2134] pb-1 hover:text-[#b7004d] transition-colors duration-300" href="#">Trending</a>
+</div>
+</div>
+<div class="flex items-center space-x-6">
+<button class="material-symbols-outlined text-[#b7004d] hover:scale-95 duration-150" data-icon="search">search</button>
+<button class="material-symbols-outlined text-[#b7004d] hover:scale-95 duration-150" data-icon="person">person</button>
+<button class="material-symbols-outlined text-[#b7004d] hover:scale-95 duration-150 relative" data-icon="shopping_bag">
+                    shopping_bag
+                    <span class="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] text-white">2</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="max-w-screen-2xl mx-auto px-4 md:px-8 py-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+<!-- Left Column: Product Imagery (Asymmetric Layout) -->
+<div class="lg:col-span-7 space-y-6">
+<div class="relative group">
+<div class="aspect-[4/5] w-full rounded-xl overflow-hidden bg-surface-container-low">
+<img alt="Ishqnavi Blush Silk Dress" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Stunning model wearing an elegant blush silk evening dress posing in a minimalist studio with soft natural light shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDT_EYx9q6RdTmxY6KSnYzLfv7w736myc_Mjjdog0bZXKXTe36ZofN0AiomsNUolmpgsDStSBW0x598pIRoz04KYT3w2tCax_ReLc3yjqO0lCgktskkXaa1a2zqtV1wzHp0lmlbJrodR6tkfRU6rvoIMiCrVpY2edBEynyXCZ3jGiFnUT3OYVEIZjSBtgi7MLZwlJSBH3R0Kw1Djd2HnX61-v_HCjGcGuuXucg-hyXcVES_mdyVWgi1htkk-JJuO6KWFH12H26LJKGy"/>
+</div>
+<div class="absolute top-6 left-6 flex flex-col gap-2">
+<span class="bg-primary-fixed text-on-primary-fixed px-4 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase">Best Seller</span>
+<span class="bg-tertiary-container text-on-tertiary-container px-4 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase shadow-sm">Easy Product Replacement</span>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-4">
+<div class="aspect-square rounded-lg overflow-hidden bg-surface-container-lowest">
+<img alt="Detail 1" class="w-full h-full object-cover hover:opacity-80 transition-opacity cursor-pointer" data-alt="Close-up detail of high-quality silk fabric texture with soft pink folds and elegant draping" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvF7p2qmK-JvOWUy-y2qupv5whmmB6G39d4fTtZvRLZoceF84iMya3H747nMYR9sapvhg-ZbK7w6r3ESjbJ76iwLJnaS5F46K6FiSmejMfFPROzE1FRBAwdrZaIQ0Z3Q9jRMf-YTZZlaBUmK-RMIAUIzrDcrYIUnjeLXcqxBxi4YTnRWwrVXTNb-XQmHd22O9HARkmkvhL_xvXT-oe-VX6eWaQdljnp9Am0rPBMQ7oBgebtUiQiMIJZ-Knb9mLiOkQFm36UC5jPKFp"/>
+</div>
+<div class="aspect-square rounded-lg overflow-hidden bg-surface-container-lowest">
+<img alt="Detail 2" class="w-full h-full object-cover hover:opacity-80 transition-opacity cursor-pointer" data-alt="Back view of a luxury dress showing intricate stitching and refined tailoring details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWmBH4oMk-dyNvuOVsxU2Yu6Ctyax63qKQN5AMaPmh4E_Pv6N7RGh_D4q2Hg-xaFxPSgbVhOxlID3JE_bdKOYIRKpCj6Cudv8Z0i_f_x9ej-dj3TyEixcMIaDbX1_OQYzAR_07Zy9KJl8HyxLBJkvUGzyOVuf4VE3n_0Yl3WCX2ZptLu0TFi7mMKKUGl54TKLlxx3v_x5oau-kT855romL5GQFJew2tFWebdNeln-iHF-KpDsZpTR2CN60J6jUjyCYD6fygeZ6k0g3"/>
+</div>
+<div class="aspect-square rounded-lg overflow-hidden bg-surface-container-lowest">
+<img alt="Detail 3" class="w-full h-full object-cover hover:opacity-80 transition-opacity cursor-pointer" data-alt="Lifestyle shot of a woman in an elegant outfit walking through a modern marble hall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbn5td-VdWrT-Sh-NekkQT6G2aAuZd3IR_I9mJEFAgEOoAlXYTICLFjCiiZ-p7d5Oc_vOJgepY7i4Tg4jTb0mWLTEfS0qFeO2-Pof7YmQWhqjzL1YfVmpp4FCftyTUNOkq9yJU4MnidZs5ZbohjOnCpG6Qj4pU-kVdDrzWzp27MJ7I2zo75ppHYXq-HWwY6mSswjppN_IC6j_4qpJzHOxNJAC3dSpCUhf10UoG_vjVRTj3W9fIM39UAFU7qQNxVHIzi9EhLUfXuz_x"/>
+</div>
+</div>
+</div>
+<!-- Right Column: Product Info & Actions -->
+<div class="lg:col-span-5 flex flex-col justify-start">
+<nav class="flex items-center text-xs tracking-widest uppercase text-on-surface-variant mb-6 space-x-2">
+<a class="hover:text-primary" href="#">Collections</a>
+<span>/</span>
+<a class="hover:text-primary" href="#">Evening Wear</a>
+<span>/</span>
+<span class="text-on-surface">Signature Blush</span>
+</nav>
+<h1 class="text-4xl lg:text-5xl font-bold tracking-tight text-on-surface mb-2">The Ethereal Petal Silk Dress</h1>
+<p class="text-sm font-medium text-outline mb-6">SKU: ISHQ-DRS-0042</p>
+<div class="flex items-baseline space-x-4 mb-8">
+<span class="text-4xl font-headline font-bold text-primary">₹8,499.00</span>
+<span class="text-xl font-headline text-outline line-through">₹12,000.00</span>
+<span class="text-sm font-bold text-error-dim bg-error-container/10 px-2 py-1 rounded">30% OFF</span>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl mb-10">
+<h3 class="font-headline font-bold mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="description">description</span>
+                        The Curator's Note
+                    </h3>
+<p class="text-body-md text-on-surface-variant leading-relaxed">
+                        Handcrafted from the finest mulberry silk, this piece embodies timeless elegance with a contemporary edge. Featuring a delicate cowl neck and an asymmetrical hemline, it's designed to move with grace and fluidity. Perfectly curated for your most memorable evenings.
+                    </p>
+</div>
+<!-- Size & Selection -->
+<div class="mb-8">
+<div class="flex justify-between items-center mb-4">
+<span class="label-md font-bold text-on-surface">Select Size</span>
+<button class="text-xs font-bold text-primary underline">Size Guide</button>
+</div>
+<div class="flex gap-3">
+<button class="w-12 h-12 rounded-full border-1.5 border-outline flex items-center justify-center text-sm font-medium hover:border-primary hover:text-primary transition-all">XS</button>
+<button class="w-12 h-12 rounded-full border-1.5 border-primary bg-primary-container/10 text-primary flex items-center justify-center text-sm font-bold">S</button>
+<button class="w-12 h-12 rounded-full border-1.5 border-outline flex items-center justify-center text-sm font-medium hover:border-primary hover:text-primary transition-all">M</button>
+<button class="w-12 h-12 rounded-full border-1.5 border-outline flex items-center justify-center text-sm font-medium hover:border-primary hover:text-primary transition-all">L</button>
+<button class="w-12 h-12 rounded-full border-1.5 border-outline flex items-center justify-center text-sm font-medium hover:border-primary hover:text-primary transition-all">XL</button>
+</div>
+</div>
+<!-- CTA Buttons -->
+<div class="flex flex-col sm:flex-row gap-4 mb-10">
+<button class="flex-1 bg-gradient-to-br from-primary to-primary-container text-white font-bold py-5 px-8 rounded-full shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-3">
+<span class="material-symbols-outlined" data-icon="shopping_bag" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+                        Add to Cart
+                    </button>
+<button class="flex-1 border-[1.5px] border-outline text-on-surface font-bold py-5 px-8 rounded-full hover:bg-surface-container-high transition-all flex items-center justify-center gap-3 active:scale-95">
+                        Buy Now
+                    </button>
+</div>
+<!-- Payment Trust Section -->
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-center p-4 bg-surface-container-lowest rounded-xl">
+<div class="w-10 h-10 rounded-full bg-[#e6f4ea] text-[#1e8e3e] flex items-center justify-center mr-3">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Cash on Delivery</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Available Now</p>
+</div>
+</div>
+<div class="flex items-center p-4 bg-surface-container-lowest rounded-xl">
+<div class="w-10 h-10 rounded-full bg-[#e8f0fe] text-[#1a73e8] flex items-center justify-center mr-3">
+<span class="material-symbols-outlined" data-icon="shield_with_heart" style="font-variation-settings: 'FILL' 1;">shield_with_heart</span>
+</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Secure Online</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Encrypted Payment</p>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-8 border-t border-outline-variant/20 space-y-4">
+<div class="flex items-center gap-3 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary" data-icon="local_shipping">local_shipping</span>
+<span>Free express shipping on orders above ₹5,000</span>
+</div>
+<div class="flex items-center gap-3 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary" data-icon="restart_alt">restart_alt</span>
+<span>Hassle-free 30-day returns &amp; exchanges</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Editorial Carousel/Section -->
+<section class="mt-24">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="text-3xl font-bold tracking-tight">Complete the Look</h2>
+<p class="text-on-surface-variant">Selected by our lead designers for this piece.</p>
+</div>
+<button class="text-primary font-bold text-sm label-md flex items-center gap-2 hover:translate-x-1 transition-transform">
+                    View Styling Guide <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<!-- Related Item 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-surface-container-lowest rounded-xl overflow-hidden mb-4 relative">
+<img alt="Accessory 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Elegant gold minimalist necklace with a small pearl detail against a warm skin tone" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUgXotGQMY8ARsDTzD9XiXzID3HiF7LKejsK1doZSjaOUY8yHjx3lO-iQ4up66I4lXRCPxk3mkV_H0HG0A_qu-0U7DBGeX0jTDetyHn7L_S2Bl7pQxWw8OmxCuc6emPNz1zPToU9SDLQ1zcaEn94vUSkEwXnhxWT7UHWH5KER9oKRclUgkjaK_L-adkBysCuqoF6-8gmazSNxq8O0BJSJjBcSk1yInEd-PGAKGBYOTVnfZQLBRrwCdF-gbQtxNcuOG-K5QDffW40xO"/>
+<button class="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary" data-icon="add">add</span>
+</button>
+</div>
+<h4 class="font-bold text-sm mb-1">Aurelian Pearl Choker</h4>
+<p class="text-primary font-bold text-sm">₹2,200</p>
+</div>
+<!-- Related Item 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-surface-container-lowest rounded-xl overflow-hidden mb-4 relative">
+<img alt="Accessory 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Luxury rose gold stiletto heels with delicate straps on a velvet surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8gdcu0XTrYQvo-bjOPdUqUoGn9PbUNKMQAEskQ3sLEjleMGkrQTFkWMZp72n7vlbtdxBZMYRkdYV7ZzsFSIt0_Msu9Z0xHirfzGEix9Y6b_v8l-JTSV_Rjq-qLu7wuUBjK4PZtQoaldrQz8IYiYTwM30Dd3GCYFXSbj7-Au1aBb3hN41tZgHjvVjiMO3xF2jTgGDOsCCj1f3utlI_EJCyFicJU3ykbBmS_ktfyjUv3j81mNqMdb_ArHeCZIkng5cvHMMKnQlhgudV"/>
+<button class="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary" data-icon="add">add</span>
+</button>
+</div>
+<h4 class="font-bold text-sm mb-1">Blush Velvet Stilettos</h4>
+<p class="text-primary font-bold text-sm">₹5,400</p>
+</div>
+<!-- Related Item 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-surface-container-lowest rounded-xl overflow-hidden mb-4 relative">
+<img alt="Accessory 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Premium leather designer clutch bag in soft beige color" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmMxP3fI3HStUxjXK6KEXHLAVOZ6rfhSIPSf7kwroyUb-TqGQy0KDYQvN7bhw3H3gszZbeiPp1n1idPjlA-9-NpHsWIO_BTaxILCAEwIDWuDk_eedZ74B5Xh6P33BYU_opAXAnmisLsvfWSM-YUzPCpPl7R_DXRJ7nP8mt3el9L8vHruza8RhOYsArOYI6nQ86vV7ghA2u1PVC0URGG7zAaNQiGi4x9ClQigwLPWUC3YexVAIc4ZMgHnpgdJC4KldQWOaIUwQq6V4o"/>
+<button class="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary" data-icon="add">add</span>
+</button>
+</div>
+<h4 class="font-bold text-sm mb-1">Minimalist Frame Clutch</h4>
+<p class="text-primary font-bold text-sm">₹4,100</p>
+</div>
+<!-- Related Item 4 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-surface-container-lowest rounded-xl overflow-hidden mb-4 relative">
+<img alt="Accessory 4" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Set of delicate gold rings with tiny gemstones displayed on a marble block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlzDRob4K8P6xKoRIIul9SnfgB0EgVS-o0P9WwUXGvGnKoIderSWRUi4281k9Bvs3IeUIMjW9CMmKksfv84tB3kl8gpVm8caFh3erpErTh4YiikRh3par7VoDxfqxzwlb1Qut5_WpcCWYsoHa4dUwEWIHBAD9xMhJVU7I-6-tPK4gL51SEj_thpoazjXMHUhMsu74NnZTI-7W_Y6UC9CnSimMC2eaF7dZHi5wAYx58q-P--O4dM4pUGIBHIvIBt_UbW6HEpNgo_1yj"/>
+<button class="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary" data-icon="add">add</span>
+</button>
+</div>
+<h4 class="font-bold text-sm mb-1">Eternal Stacking Rings</h4>
+<p class="text-primary font-bold text-sm">₹1,800</p>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-[#ffecf1] mt-24">
+<div class="w-full py-12 px-8 grid grid-cols-1 md:grid-cols-4 gap-12 max-w-screen-2xl mx-auto">
+<div class="space-y-4">
+<span class="text-lg font-bold text-[#b7004d]">Ishqnavi</span>
+<p class="text-sm text-on-surface-variant leading-relaxed">Redefining luxury through curated fashion. Experience elegance in every stitch.</p>
+<div class="flex space-x-4">
+<span class="material-symbols-outlined text-[#b7004d]" data-icon="share">share</span>
+<span class="material-symbols-outlined text-[#b7004d]" data-icon="alternate_email">alternate_email</span>
+</div>
+</div>
+<div>
+<h5 class="text-xs tracking-widest uppercase font-bold text-[#b7004d] mb-6">Explore</h5>
+<ul class="space-y-3 text-sm text-[#9c677d]">
+<li><a class="hover:text-[#b7004d] transition-colors" href="#">New Arrivals</a></li>
+<li><a class="hover:text-[#b7004d] transition-colors" href="#">Collections</a></li>
+<li><a class="hover:text-[#b7004d] transition-colors" href="#">Trending</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-xs tracking-widest uppercase font-bold text-[#b7004d] mb-6">Customer Care</h5>
+<ul class="space-y-3 text-sm text-[#9c677d]">
+<li><a class="hover:text-[#b7004d] transition-colors" href="#">Shipping Info</a></li>
+<li><a class="hover:text-[#b7004d] transition-colors" href="#">Returns</a></li>
+<li><a class="hover:text-[#b7004d] transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-xs tracking-widest uppercase font-bold text-[#b7004d] mb-6">Policy</h5>
+<ul class="space-y-3 text-sm text-[#9c677d]">
+<li><a class="hover:text-[#b7004d] transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-[#b7004d] transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="w-full py-6 px-8 border-t border-[#d89cb4]/20 flex flex-col md:flex-row justify-between items-center gap-4 max-w-screen-2xl mx-auto">
+<p class="text-xs text-[#9c677d]">© 2024 Ishqnavi Boutique. All rights reserved.</p>
+<div class="flex space-x-6">
+<span class="text-xs text-[#9c677d] uppercase tracking-widest">Designed for the Modern Muse</span>
+</div>
+</div>
+</footer>
+</body></html>
